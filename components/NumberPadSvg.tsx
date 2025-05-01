@@ -6,6 +6,7 @@ export default function NumberPadSvg() {
       height="21"
       viewBox="0 0 20 21"
       fill="none"
+      className="select-none"
     >
       <g opacity="0.7">
         <path

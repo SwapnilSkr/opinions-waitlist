@@ -87,14 +87,14 @@ export default function Home() {
         <Image 
           src={Glow} 
           alt="glow" 
-          className="absolute top-0 left-0 w-full h-full object-cover" 
+          className="absolute top-0 left-0 w-full h-full object-cover select-none" 
           priority
         />
         <div className="relative z-10">
-          <Image src={AppIcon} alt="app icon" className="w-[160px] h-[160px] object-contain" />
+          <Image src={AppIcon} alt="app icon" className="w-[160px] h-[160px] object-contain select-none" />
         </div>
         <div className="relative w-full flex flex-col items-center">
-          <h1 className="font-gilroy text-[36px] md:text-[84px] font-bold"
+          <h1 className="font-gilroy text-[36px] md:text-[84px] font-bold select-none"
             style={{
               background: "linear-gradient(180deg, #FFF 0%, #D0FFF7 100%)",
               WebkitBackgroundClip: "text",
@@ -104,7 +104,7 @@ export default function Home() {
           >
             Your voice
           </h1>
-          <h1 className="font-gilroy text-[36px] md:text-[84px] font-bold absolute md:top-[60px] top-[40px]"
+          <h1 className="font-gilroy text-[36px] md:text-[84px] font-bold absolute md:top-[60px] top-[40px] select-none"
             style={{
               background: "linear-gradient(180deg, #D0FFF7 0%, #6CFFE6 100%)",
               WebkitBackgroundClip: "text",
@@ -118,7 +118,7 @@ export default function Home() {
         <form id="waitlistForm" onSubmit={handleSubmit} className="mt-[75px] waitlist-container font-jakarta max-w-[300px] md:max-w-[600px] w-full relative z-50">
           <div className="flex items-center justify-between w-full">
             <div className="input-container bg-[rgba(255, 255, 255, 0.01)] rounded-[0.5px] text-[16px] md:text-[20px] flex items-center relative w-[50%] md:w-[63%]">
-              <div className="absolute left-3">
+              <div className="absolute left-3 select-none">
                 <NumberPadSvg/>
               </div>
               <input 
@@ -139,14 +139,14 @@ export default function Home() {
               disabled={!mobileNumber.trim() || submitting || submitted}
             >
               {submitting ? "Submitting..." : "join waitlist"}
-              {!submitting && <ArrowSvg/>}
+              {!submitting && <span className="select-none"><ArrowSvg/></span>}
             </button>
           </div>
         </form>
         <div className="mt-[55px] flex items-center justify-center gap-4 font-jakarta text-[16px] md:text-[24px] font-[600]">
           {submitted && (
             <>
-              <TickSvg/>
+              <span className="select-none"><TickSvg/></span>
               <p className="text-[#71FF86]">you&apos;ve joined the waitlist!</p>
             </>
           )}

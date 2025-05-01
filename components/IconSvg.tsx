@@ -5,6 +5,7 @@ export default function IconSvg() {
       width="160"
       height="160"
       viewBox="0 0 180 180"
+      className="select-none"
       fill="none"
       style={{
         fill: 'radial-gradient(50.13% 50.13% at 50.13% -0.12%, rgba(40, 40, 40, 0.50) 0%, rgba(11, 11, 11, 0.50) 100%)',

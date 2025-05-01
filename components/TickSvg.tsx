@@ -6,6 +6,7 @@ export default function TickSvg() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      className="select-none"
     >
       <path
         fillRule="evenodd"
