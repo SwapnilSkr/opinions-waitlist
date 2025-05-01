@@ -126,7 +126,7 @@ export default function Home() {
                 name="mobile"
                 id="mobileNumber"
                 placeholder="mobile number" 
-                className="bg-transparent text-white outline-none px-12 py-3 w-full cursor-text border border-[rgba(255, 255, 255, 0.80)]"
+                className="bg-transparent text-white outline-none px-12 py-3 w-full cursor-text border border-[rgba(255, 255, 255, 0.80)] select-none"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
                 disabled={submitting || submitted}
@@ -135,7 +135,7 @@ export default function Home() {
             <button 
               type="button" 
               onClick={handleButtonClick}
-              className={`ml-4 bg-white text-black text-[16px] md:text-[20px] px-2 md:px-6 py-3 flex rounded-[1px] w-[45%] md:w-[35%] justify-center gap-2 md:gap-4 items-center font-bold cursor-pointer relative z-50 ${!mobileNumber.trim() || submitting || submitted ? 'opacity-50 pointer-events-none' : ''}`}
+              className={`ml-4 bg-white text-black text-[16px] md:text-[20px] px-2 md:px-6 py-3 flex rounded-[1px] w-[45%] md:w-[35%] justify-center gap-2 md:gap-4 items-center font-bold cursor-pointer select-none relative z-50 ${!mobileNumber.trim() || submitting || submitted ? 'opacity-50 pointer-events-none' : ''}`}
               disabled={!mobileNumber.trim() || submitting || submitted}
             >
               {submitting ? "Submitting..." : "join waitlist"}
@@ -147,7 +147,7 @@ export default function Home() {
           {submitted && (
             <>
               <span className="select-none"><TickSvg/></span>
-              <p className="text-[#71FF86]">you&apos;ve joined the waitlist!</p>
+              <p className="text-[#71FF86] select-none">you&apos;ve joined the waitlist!</p>
             </>
           )}
         </div>
