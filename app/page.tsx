@@ -87,11 +87,11 @@ export default function Home() {
         <Image 
           src={Glow} 
           alt="glow" 
-          className="absolute top-0 left-0 w-full h-full object-cover select-none" 
+          className="absolute top-0 left-0 w-full h-full object-cover select-none pointer-events-none" 
           priority
         />
         <div className="relative z-10">
-          <Image src={AppIcon} alt="app icon" className="w-[160px] h-[160px] object-contain select-none" />
+          <Image src={AppIcon} alt="app icon" className="w-[160px] h-[160px] object-contain select-none pointer-events-none" />
         </div>
         <div className="relative w-full flex flex-col items-center">
           <h1 className="font-gilroy text-[36px] md:text-[84px] font-bold select-none"
